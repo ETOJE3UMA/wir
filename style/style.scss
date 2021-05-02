@@ -21,6 +21,19 @@ $shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
   height: 10vh;
 }
 
+%wrap {
+  display: flex;
+  margin-top: 3rem;
+  background: linear-gradient(119.04deg, #3d3f45 17.25%, #1c1e23 88.93%);
+  box-shadow: $shadow;
+  position: absolute;
+  width: 900px;
+  height: 420px;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
 // Основные стили
 body {
   font-family: "Montserrat", sans-serif;
@@ -35,14 +48,34 @@ ul {
   list-style: none;
 }
 
+.big-title {
+  font-weight: 800;
+  font-style: 36px;
+  color: $yellow;
+}
+
+p {
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+p.definition {
+  font-size: 14px !important;
+}
+
+span.bold {
+  font-weight: 600;
+}
+
 //Меню
 header {
   @extend %header;
 }
 .logotype {
   display: inline-block;
-  margin-right: 178px;
-  margin-left: 165px;
+  margin: 0 150px;
 }
 nav {
   display: flex;
@@ -60,13 +93,159 @@ nav > ul {
       font-size: 12px;
       line-height: 15px;
     }
-  }
-  :first-child {
-    padding-left: 0;
+    &:first-child {
+      padding-left: 0;
+    }
   }
 }
 
 // Первая секция
 .one-sec {
+  position: relative;
   background-color: $black;
+  width: 100%;
+  height: 90vh;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 110vh;
+    background-color: $gray;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    // margin-bottom: -15%;
+  }
 }
+
+.wrap {
+  @extend %wrap;
+}
+
+.boxes {
+  display: inline-block;
+  margin-left: 5rem;
+  .first-box {
+    width: 15rem;
+    height: 20rem;
+    background-color: $yellow;
+    margin-top: -30px;
+  }
+  .twice-box {
+    width: 180px;
+    height: 160px;
+    border: 30px solid $white;
+  }
+}
+
+.wrap__picture {
+  width: 265px;
+  height: 419px;
+  margin-left: -12rem;
+  margin-top: 2rem;
+}
+
+.wrap__info {
+  width: 349px;
+  margin-left: 5em;
+  margin-top: 5em;
+  h1 {
+    font-size: 24px;
+    color: $white;
+    letter-spacing: 0.1em;
+    .big-title {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 42px;
+      letter-spacing: 0.2em;
+    }
+  }
+  p {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.2em;
+    color: $white;
+  }
+  a {
+    color: $white;
+    font-size: 10px;
+    line-height: 12px;
+    border: 2px solid $white;
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 4rem;
+    letter-spacing: 0.2em;
+    margin-left: 9rem;
+  }
+}
+
+.yellow {
+  color: $yellow;
+}
+
+//Вторая секция
+.sec-two {
+  background-color: $yellow;
+  display: flex;
+  position: relative;
+  .box-img {
+    display: flex;
+    min-width: 50%;
+    .box-one {
+      position: absolute;
+      width: 173.42px;
+      height: 326.71px;
+      background: #181818;
+      top: 230px;
+      left: 360px;
+    }
+    .box-two {
+      position: absolute;
+      width: 361.63px;
+      height: 204.19px;
+      background: $gray;
+      top: 130px;
+      left: 114px;
+    }
+    .box-three {
+      position: absolute;
+      width: 226.09px;
+      height: 326.71px;
+      background: #fff;
+      top: 160px;
+      left: 250px;
+    }
+    .box-img {
+      position: absolute;
+      top: 150px;
+      left: 180px;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0;
+  }
+  .box-info {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    width: 558px;
+    .box-info__line-one {
+      display: block;
+      width: 164px;
+      height: 2px;
+      background-color: $black;
+      margin: 40px 0 50px 87px;
+    }
+    .box-info__line-two {
+      display: block;
+      width: 136px;
+      height: 2px;
+      background-color: $black;
+      margin: 45px 0 45px 0;
+      margin-left: auto;
+    }
+  }
+}
+
+@import "media";

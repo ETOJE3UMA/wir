@@ -12,6 +12,23 @@ header {
   height: 10vh;
 }
 
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+  background: linear-gradient(119.04deg, #3d3f45 17.25%, #1c1e23 88.93%);
+  -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  width: 900px;
+  height: 420px;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -25,10 +42,30 @@ ul {
   list-style: none;
 }
 
+.big-title {
+  font-weight: 800;
+  font-style: 36px;
+  color: #eecf6d;
+}
+
+p {
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+p.definition {
+  font-size: 14px !important;
+}
+
+span.bold {
+  font-weight: 600;
+}
+
 .logotype {
   display: inline-block;
-  margin-right: 178px;
-  margin-left: 165px;
+  margin: 0 150px;
 }
 
 nav {
@@ -65,11 +102,176 @@ nav > ul > li > a {
   line-height: 15px;
 }
 
-nav > ul :first-child {
+nav > ul > li:first-child {
   padding-left: 0;
 }
 
 .one-sec {
+  position: relative;
   background-color: #1c1b20;
+  width: 100%;
+  height: 90vh;
+  z-index: 1;
 }
+
+.one-sec::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 110vh;
+  background-color: #cfcfcf;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+.boxes {
+  display: inline-block;
+  margin-left: 5rem;
+}
+
+.boxes .first-box {
+  width: 15rem;
+  height: 20rem;
+  background-color: #eecf6d;
+  margin-top: -30px;
+}
+
+.boxes .twice-box {
+  width: 180px;
+  height: 160px;
+  border: 30px solid #f6f5f4;
+}
+
+.wrap__picture {
+  width: 265px;
+  height: 419px;
+  margin-left: -12rem;
+  margin-top: 2rem;
+}
+
+.wrap__info {
+  width: 349px;
+  margin-left: 5em;
+  margin-top: 5em;
+}
+
+.wrap__info h1 {
+  font-size: 24px;
+  color: #f6f5f4;
+  letter-spacing: 0.1em;
+}
+
+.wrap__info h1 .big-title {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 42px;
+  letter-spacing: 0.2em;
+}
+
+.wrap__info p {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.2em;
+  color: #f6f5f4;
+}
+
+.wrap__info a {
+  color: #f6f5f4;
+  font-size: 10px;
+  line-height: 12px;
+  border: 2px solid #f6f5f4;
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 4rem;
+  letter-spacing: 0.2em;
+  margin-left: 9rem;
+}
+
+.yellow {
+  color: #eecf6d;
+}
+
+.sec-two {
+  background-color: #eecf6d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.sec-two .box-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 50%;
+}
+
+.sec-two .box-img .box-one {
+  position: absolute;
+  width: 173.42px;
+  height: 326.71px;
+  background: #181818;
+  top: 230px;
+  left: 360px;
+}
+
+.sec-two .box-img .box-two {
+  position: absolute;
+  width: 361.63px;
+  height: 204.19px;
+  background: #cfcfcf;
+  top: 130px;
+  left: 114px;
+}
+
+.sec-two .box-img .box-three {
+  position: absolute;
+  width: 226.09px;
+  height: 326.71px;
+  background: #fff;
+  top: 160px;
+  left: 250px;
+}
+
+.sec-two .box-img .box-img {
+  position: absolute;
+  top: 150px;
+  left: 180px;
+}
+
+.sec-two p {
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0;
+}
+
+.sec-two .box-info {
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+  width: 558px;
+}
+
+.sec-two .box-info .box-info__line-one {
+  display: block;
+  width: 164px;
+  height: 2px;
+  background-color: #1c1b20;
+  margin: 40px 0 50px 87px;
+}
+
+.sec-two .box-info .box-info__line-two {
+  display: block;
+  width: 136px;
+  height: 2px;
+  background-color: #1c1b20;
+  margin: 45px 0 45px 0;
+  margin-left: auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 /*# sourceMappingURL=style.css.map */

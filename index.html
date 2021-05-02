@@ -5,21 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Подключение normalize.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <!-- Подключение стилей -->
     <link rel="stylesheet" href="style/style.css" />
     <!-- Подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Подключение AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Мировые информационные ресурсы</title>
   </head>
   <body>
     <header>
       <div class="logotype">
-        <img src="img/logo.svg" alt="logotype">
+        <img src="img/logo.svg" alt="logotype" />
       </div>
       <nav>
         <ul>
@@ -31,8 +36,81 @@
       </nav>
     </header>
     <main>
-      <section class="one-sec"></section>
+      <!-- Первая секция -->
+      <section class="one-sec">
+        <div class="wrap">
+          <div class="boxes">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="800"
+              class="first-box"
+            ></div>
+            <div class="twice-box"></div>
+          </div>
+          <img
+            data-aos="fade-left"
+            data-aos-duration="800"
+            class="wrap__picture"
+            src="./img/pictures/home-one-sec-robo.png"
+            alt="robo"
+          />
+          <div class="wrap__info">
+            <h1>
+              <span class="big-title">Мировые</span> информационные ресурсы
+            </h1>
+            <p>
+              Развитие <span class="yellow">мирового рынка</span> информации
+            </p>
+            <a href="#"> Страница <span class="yellow">об авторе</span> </a>
+          </div>
+        </div>
+      </section>
+      <!-- /Первая секция -->
+
+      <!-- Вторая секция  -->
+      <section class="sec-two">
+        <div class="box-img">
+          <div data-aos="fade-up" data-aos-duration="800" class="box-one"></div>
+          <div data-aos="fade-left" data-aos-duration="800" class="box-two"></div>
+          <div data-aos="fade-down" data-aos-duration="800" class="box-three"></div>
+          <div data-aos="zoom-in" data-aos-duration="800" class="box-img">
+            <img src="./img/pictures/home-two-sec.png" alt="eye">
+          </div>
+        </div>
+        <div class="box-info">
+          <p class="box-info__text">
+            Как и при пользовании традиционными видами ресурсов и продуктов,
+            общество должно знать о расположении информационных ресурсов, их
+            стоимости, владельцах, доступности. Ответы на все эти вопросы может
+            дать <span class="bold">информационный рынок</span>.
+          </p>
+          <span data-aos="fade-left" data-aos-duration="1800" class="box-info__line-one"></span>
+          <h2>Рынок информации –</h2>
+          <p class="box-info__text definition">
+            это совокупность экономических, организационных и правовых отношений
+            по торговле информационными услугами между производителями и
+            потребителями, для него характерна определенная номенклатура услуг,
+            условия и механизмы их представления.
+          </p>
+          <span data-aos="fade-right" data-aos-duration="1800" class="box-info__line-two"></span>
+          <p class="box-info__text">
+            Зарождение информационного рынка связано с появлением множества
+            сетевых структур, которые предлагают своим пользователям схожие
+            услуги. Таким образом, между информационными предприятиями
+            образовалась реальная конкуренция. Информационный рынок России
+            развивался с некоторыми отличиями от аналогичного процесса на
+            Западе. В настоящее время в западных странах осуществляется
+            коммерциализация систем компьютерной связи, использующихся ранее
+            только научными кругами.
+          </p>
+        </div>
+      </section>
     </main>
     <footer class="foo-light"></footer>
+    <!-- Подключение AOS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
